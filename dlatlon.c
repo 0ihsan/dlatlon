@@ -9,32 +9,35 @@
 
                                       int
                               main(int a,char**v)
-                           {if(a>1){puts("\033[33mNA"
-                       "ME\033[0m\n    dlatlon - distan"
-                   "ce between two pairs of latitude and lon"
-               "gtitudes on earth\n\n\033[33mDESCRIPTION\033[0m"
-             "\n    Calculate distance between two pairs of latitu"
-           "de and longitude. Data should be\n    coming from stdin "
-        "and the shape should be `\033[32m<lat><tab><lon>\\n\033[0m`.\n"
-      "\n\033[33m EXAMPLE\033[0m\n    dlatlon < lat_tab_lon.tsv");return 1
-     ;}char b[42];double c[4];int i=0;while(fgets(b,42,stdin)!=NULL){c[i%4]
-      =t(s(b,"\t"));i++;c[i%4]=t(s(s(NULL,"\t"),"\n"));i++;if(i>4&&i%2==0)
-               printf("%.3f\n",d(c[0]*r,c[1]*r,c[2]*r,c[3]*r));};
-                                   return 0;
-                                      }/*{
-                                      ****
-                                      rrr
-                                      rrr
-                                      rrr
-                                      rrr
-                                      rrr
-                                      rrr
-                                      rrr
-                                      rrr
-                                      rrr
-                                      rrr
-                                 _.   rrr
-                                 /. , rrr\ /  , \ `
+                          {if(a>1){puts("\033[33mNAM"
+                        "E\033[0m\n  dlatlon - disatnc"
+                     "e between two pairs of latitude and"
+                    " longitudes on earth\n\n\033[33mDESCR"
+                   "IPTION\033[0m\n  input data must consis"
+                  "t of two consecutive lines of coordinates"
+                 ". infinite\n  amount of coordinate pairs can"
+                  " be streamed as`\033[32m<lat><tab><lon>\\n"
+                  "\033[0m`.\n\n\033[33m EXAMPLE\n  \033[0md"
+                    "latlon<data.tsv");return 1;}char b[42];
+                     double c[4];int i=0;while(fgets(b,42,
+                        stdin)!=NULL){c[i%4]=t(s(b,"\t"
+                          ));i++;c[i%4]=t(s(s(NULL/**/
+                               ,"\t"),"\n"));i++;
+                                    if(i>4&&
+                                     i%2==0
+                                    )printf(
+                                    "%.3f\n"
+                                    ,d(c[0]
+                                    *r,c[1]
+                                    *r,c[2]
+                                    *r,c[3]
+                                    *r));};
+                                    return(
+                                    0);;;;}
+                                     /***\
+                                     r***r
+                                 _.  rrrrr
+                                 /. ,rrrr\ /  , \ `
                    f            /. . //rr\\ . _\ /               .
              _  . \|^f/      | \,\k/\\\**///\ \ /\  \ /   \_ . ../
      //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
