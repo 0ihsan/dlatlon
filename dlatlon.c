@@ -17,7 +17,7 @@
                   "t of two consecutive lines of coordinates"
                  ". infinite\n  amount of coordinate pairs can"
                   " be streamed as`\033[32m<lat><tab><lon>\\n"
-                  "\033[0m`.\n\n\033[33m EXAMPLE\n  \033[0md"
+                   "\033[0m`.\n\n\033[33mEXAMPLE\n  \033[0md"
                     "latlon<data.tsv");return 1;}char b[42];
                      double c[4];int i=0;while(fgets(b,42,
                         stdin)!=NULL){c[i%4]=t(s(b,"\t"
