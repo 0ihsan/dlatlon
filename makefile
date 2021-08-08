@@ -1,10 +1,20 @@
+prefix ?= /usr/local
+bin = $(prefix)/bin
+
 default: dlatlon
+
 dlatlon:
 	cc dlatlon.c -o dlatlon -lm
+
 install: dlatlon
-	chmod +x dlatlon
-	cp dlatlon /usr/local/bin/dlatlon
-clean:
-	rm -rf ./dlatlon
+	install -d "$(bin)"
+	install dlatlon "$(bin)"
+
 uninstall:
-	rm -rf /usr/local/bin/dlatlon
+	rm -rf "$(bin)/dlatlon"
+
+clean:
+	rm -rf dlatlon
+
+.PHONY: dlatlon install uninstall clean
+
